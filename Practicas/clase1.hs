@@ -55,7 +55,7 @@ factorial n = n * factorial (n-1)
 
 
 
---		EJERCICIO 7 (ultimos 3 numeros de una lista)
-lasttt a [] cnt = error "Error"
-lasttt 0 b cnt = []
-lasttt a (h:t) cnt = 
+--		EJERCICIO 7 (ultimos a numeros de una lista)
+lasttt 0 b = []
+lasttt a [] = error "Error"
+lasttt a b =  lasttt (a-1) (init b) ++ [last b]
