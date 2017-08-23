@@ -14,6 +14,6 @@ reverseList x = rev x []
 maxminTupla (h:t) = maxmin t (h,h)
 	where maxmin l (a,b)
 			| l == [] = (a,b)
-			| head l > a = maxmin l (head l,b)
-			| head l < b = maxmin l (a, head l)
+			| head l > a = maxmin (tail l) (head l,b)
+			| head l < b = maxmin (tail l) (a, head l)
 			| otherwise = maxmin (tail l) (a,b) 
