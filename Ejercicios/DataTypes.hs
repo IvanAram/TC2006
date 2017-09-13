@@ -38,3 +38,6 @@ createTreeFromList lista = func lista Empty
 addListToTree lista tree
 	| lista == [] = tree
 	| otherwise = addListToTree (tail lista) (insertNode (head lista) tree)
+
+treeToList Empty = []
+treeToList (Node n left right) = treeToList left ++ [n] ++ treeToList right
