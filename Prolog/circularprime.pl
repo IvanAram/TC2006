@@ -1,5 +1,4 @@
 :-dynamic tablaprimes/1.
-:-dynamic tablacircular/1.
 isdivisible(X,Y):- 0 is X mod Y,!.
 isdivisible(X,Y):- X > Y + 1, isdivisible(X,Y+1). 
 
